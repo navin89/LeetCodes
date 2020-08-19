@@ -1,25 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void swap(char l, char i)
-{
 
-}
-
-
-void permSwap(char s[], int l, int h)
-{
-    int i;
-    if(l==h){
-        printf("Result: %s", s);
-    }else{
-        for(i=l; l<=h;i++) {
-            swap(s[l], s[i]);
-            permSwap(s, l+1, h);
-            swap(s[l], s[i]);
-        }
-    }
-}
 
 /**
  * @details
