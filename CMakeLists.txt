@@ -4,9 +4,12 @@ project(LeetCodes)
 set(CMAKE_CXX_STANDARD 17)
 
 
+# -- LINKED LIST --
+add_executable(LeetCodes linkedLists/displayLinkedList.c)
+
 # --- MATRIX TUTORIAL ---
 #add_executable(LeetCodes matrix/diagonalMatrixC.c)
-add_executable(LeetCodes matrix/cppDiagonal/ matrix/cppDiagonal/Diagonal.cpp matrix/cppDiagonal/Diagonal.h)
+#add_executable(LeetCodes matrix/cppDiagonal/Diagonal.cpp matrix/cppDiagonal/Diagonal.h)
 
 
 # --- STRING TUTORIAL ---
