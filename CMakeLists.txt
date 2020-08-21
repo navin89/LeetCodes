@@ -16,8 +16,10 @@ add_executable(LeetCodes linkedLists/displayLinkedList.c)
 #add_executable(LeetCodes strings/permutationStr.cpp)
 #add_executable(LeetCodes strings/findAnagram.cpp)
 #add_executable(LeetCodes strings/findDupBitwiseOps.cpp)
-#add_executable(LeetCodes strings/findDupInStrings.cpp )
-
+#add_executable(LeetCodes strings/findDupInStrings.cpp)
+#add_executable(LeetCodes strings/duplicatesEx.c)
+#add_executable(LeetCodes strings/palindromeEx.c)
+#add_executable(LeetCodes strings/reversingStringEx.c)
 
 # ---- SORTING ALGORITHMS ---
 #add_executable(LeetCodes sortingAlgos/sortingMain.cpp)
