@@ -4,14 +4,14 @@ BINARY TREES
     -   Height always starts from 0 from top.  
     -   Level always starts from 1 from top.  
 
-####Conditions
+#### Conditions
     1.  No Duplicates
     2.  In-Order traversal produces a sorted order
     3.  Number of BST for 'n' nodes
 
 -   BST can be represented by an Array or Linked List.
 
-###Number of Binary Trees using N Nodes  
+### Number of Binary Trees using N Nodes  
 Finding the number of binary trees for a given number of nodes, can be derived from a formula called **Catalan Number**.
 
     The Catalan numbers are a sequence of positive integers that appear in many counting problems in combinatorics. 
@@ -19,8 +19,7 @@ Finding the number of binary trees for a given number of nodes, can be derived f
     They satisfy a fundamental recurrence relation, and have a closed-form formula in terms of binomial coefficients.  
 
 ---
-
-####Formula
+#### Formula
     T(n)= ^2n!Cn / (n+1)
 This formula gives us the number to how many different ways we can shape our tree.
 We can also find the total number of tress with maximum height for a given number of nodes by using formula:
@@ -31,7 +30,7 @@ What if the nodes are labeled?
 For example if 3 nodes are labeled as A, B, C.  
 We need to use a factorial to piece together with above formula for a given number of node/s. 
 
-####Formula
+#### Formula
 
     T(n)= ^2n!Cn / (n+1) * n!
 The added factorial piece gives us for 1 shape how many ways can be filled in - that is *n!*
@@ -77,12 +76,12 @@ This can be further simplified:
     |   3   |   4   | 15    |
 
 
-#####Node to Height
+##### Node to Height
 
 Say if we know the number of nodes for a tree, how do we find out the minimum and maximum height for the tree??
 Let's generate a formula from some simple observations:  
 
-#####For maximum height
+##### For maximum height
 
 When node is 3 - maximum nodes is 2  
 When height is 7 - maximum nodes is 6  
@@ -91,7 +90,7 @@ So, we can derive as node -1 to get the maximum height!
 
     Max height =n-1
 
-#####For minimum height
+##### For minimum height
 we don't really have a clear pattern, but we can use our previous simplified formula  
 for finding maximum node to derive this formula, to find minimum height.  
 First we need to find a way to move the height to the left hand side of the formula..  
@@ -117,12 +116,12 @@ We get 3 as shown below. you can try out with other node numbers to test it out 
 
 
 ---
-#####Internal Node vs External Node
+##### Internal Node vs External Node
     There is a relationship for deg(0) & deg(2).  
     For every deg(0) = deg(2)+1.
 
 ---
-#####N -ary Tree
+##### N -ary Tree
     N -ary tree means a tree with a given degree. This degree represents  
     the maximum number of child nodes a node can have.  
     
@@ -133,13 +132,13 @@ We get 3 as shown below. you can try out with other node numbers to test it out 
     A degree of a tree is always pre-decided.
 
 ---
-#####Tree Representations
+##### Tree Representations
     1.  Linked List
     2.  Array
 
 
 ---
-#####Tree Traversals
+##### Tree Traversals
 
     PRE ORDER: visit(node), preorder(left subtree), preorder(right subtree)  
     IN ORDER: Inorder(left), visit(node), Inorder(right)  
