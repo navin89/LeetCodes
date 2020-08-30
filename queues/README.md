@@ -7,26 +7,26 @@ Queue
         
         In various algorithms and applications can be found thus its one of the basic data structures. 
 
-####Discipline of Queue
+#### Discipline of Queue
 
     -   Queue has a discipline of FIFO (First-In First-Out). It is fundamentally different from a Stack data structure.  
         Therefore the insertion and deletion are performed at 2 different ends of an array.   
 
-####Characteristics
+#### Characteristics
 
     -   Has two ends front and rear end  
     -   Insertion performed from the rear end  
     -   Deletion performed from front end
 
-###QUEUE ADT
+### QUEUE ADT
 
-####DATA
+#### DATA
 
     1.  Array - Space for storing elements
     2.  Front pointer - for deletion
     3.  Rear pointer - for insertion
 
-####OPERATIONS  
+#### OPERATIONS  
 
     1.  enqueue(x)  
         -   inserting an element in a the queue from rear end
@@ -52,9 +52,9 @@ Queue - Single pointer, Time Complexity
         -   After deletion, the deleted index which is the first index will be vacant.  
             Therefore, we need to shift the rest of the indexes to the front which is O(n).
 
-Queue - Two pointers, Time Complexity   
+#### Queue - Two pointers, Time Complexity   
 
-####Conditions   
+#### Conditions   
 -   In using 2 pointers; initial values for front and rear is -1.  
 -   Queue is **EMPTY** when *front == rear*.  
 -   Queue is **FULL** when *rear == size-1*.
@@ -67,7 +67,7 @@ Queue - Two pointers, Time Complexity
             This covers up the vacant index.
             
             
-####Circular Queue
+#### Circular Queue
     -   The concept of a circular queue starts with having 2 pointers performing deletion and insertion as similar as above.  
         As the elements are deleted the front pointer will move down the array. But it does leave space at the front of the array, which allows for new insertion  
         enter the array using the rear pointer. 
@@ -81,7 +81,7 @@ Queue - Two pointers, Time Complexity
 
         
         
-####Priority Queue
+#### Priority Queue
 
 
-####Queue using two stacks
+#### Queue using two stacks
