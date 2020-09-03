@@ -42,14 +42,14 @@ void permPairs(char s[][3], int k) {
  * permutations for a given input
  * */
 void perm(char s[], int k) {
-    static int A[10]={0};
-    static char res[10];
+    static int A[10]={0}; // flag array
+    static char res[10]; // result array
     int i;
 
     if(s[k]=='\0') {
         res[k]='\0';
         printf("Result: %s\n", res);
-    }else {
+    } else {
         for(i=0;s[i]!='\0';i++) {
             if(A[i]==0){
                 res[k] = s[i];
@@ -64,14 +64,14 @@ void perm(char s[], int k) {
 
 int main() {
 
-    char s[] = "1234";
-    int sNumbers[3][3] = { {23,24,25}, {33,34,35}, {55,56,57} };
+    char s[] = "12";
+//    int sNumbers[3][3] = { {23,24,25}, {33,34,35}, {55,56,57} };
+//
+//    int rows = sizeof(sNumbers) / sizeof(sNumbers[0]);
+//    int cols = sizeof(sNumbers[0]) / sizeof(int);
+//    printf("Rows: %d - Cols: %d", rows, cols );
 
-    int rows = sizeof(sNumbers) / sizeof(sNumbers[0]);
-    int cols = sizeof(sNumbers[0]) / sizeof(int);
-    printf("Rows: %d - Cols: %d", rows, cols );
-
-//    perm(s, 0);
+    perm(s, 0);
 
     return 0;
 }

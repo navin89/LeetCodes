@@ -34,15 +34,5 @@ void Diagonal::display()
     }
 }
 
-int main() {
-    Diagonal d(4);
-    d.set(1,1,5);
-    d.set(2,2,8);
-    d.set(3,3,9);
-    d.set(4,4,12);
 
-    d.display();
-
-    return 0;
-}
 

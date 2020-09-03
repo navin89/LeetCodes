@@ -27,7 +27,7 @@ public:
         A = new int [n];
     }
 
-    // set the elem at specified rw & col
+    // setRowMajor the elem at specified rw & col
     void set(int rw, int col, int elem);
     // return the elem
     int get(int rw, int col);

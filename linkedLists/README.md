@@ -23,7 +23,7 @@ Basically, a node will consist of 2 sections - its value and adjacent to it a po
 |-------|----------|
 The `next` is a pointer
 
-To help with our understanding; we can think of linked list as a set of portable chairs where we can sit anywhere and be connected to one another.  
+To help with our understanding; we can think of linked list as a setRowMajor of portable chairs where we can sit anywhere and be connected to one another.  
 If we use arrays, that would be like a wooden bench with say; 5 seats which is very much a fixed architecture so in our terms its like a fixed data structure.  
 
 Using a pointer to declare, use and manipulate a linked list gives us a more manageable data structure with abstractions.  
