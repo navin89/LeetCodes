@@ -25,7 +25,7 @@ Suppose we have a 5x5 matrix of M, and we want only yhe lower triangular part fi
     How many zero elements?
     n(n-1)/2
 
-Accessing non-zero elements formula   
+  
 #### Row-Major Mapping
 
                                         ARRAY (ROW-MAJOR)
@@ -34,6 +34,7 @@ Accessing non-zero elements formula
     |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
     |row 1|   row 2   |      row 3      |      row 4            |        row 5                |
 
+    Accessing non-zero elements formula 
                     Index(A[4][3]) = [1+2+3]+2 =8
                     Index(A[5][4]) = [1+2+3+4]+3 =13
     Therefore, ->   Index(A[i][j]) = [i(i-1) / 2]+j-1
@@ -74,8 +75,7 @@ Suppose we have a 5x5 matrix of M, and we want only the upper triangular part fi
     
     How many zero elements?
     n(n-1)/2
- 
-Accessing non-zero elements formula       
+        
 #### Row-Major Mapping
 
                                    ARRAY (ROW-MAJOR)
@@ -84,6 +84,7 @@ Accessing non-zero elements formula
     |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
     |           row 1             |          row 2        |      row 3      |    row 4  |row 5|
 
+    Accessing non-zero elements formula 
                     Index(A[4][5]) = [5+4+3]+1 =13
     Therefore, ->   Index(A[i][j]) = [n+n-1+n-2 .. +n-(i-2)] + (j-i)
                     Simplified ->    [n(i-1) - (i-2)(i-1)/2]+ (j-i)
@@ -96,6 +97,7 @@ Accessing non-zero elements formula
     |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
     |col 1|   row 1   |       col 3     |          col 4        |         col 5               |
 
+    Accessing non-zero elements formula 
                     Index(A[4][5]) = [1+2+3+4]+3 =13
     Therefore, ->   Index(A[i][j]) = [1+2+3+ .. + j-1] + i-1
                     Simplified ->    [j(j-1)/2] + i-1
@@ -140,6 +142,7 @@ We can represent using this matrix in an array with either lower, middle and upp
     |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
     |   Lower Diagonal      |       Main Diagonal   |      Upper Diagonal   |
     
+    Accessing non-zero elements formula 
     Index(A[i][j])
         case 1 if i-j=1   | index=(i-1)        -> lower diagonal part
         case 2 if i-j=0   | index=(n-1)+(i-1)  -> main diagonal part
@@ -172,6 +175,7 @@ Toeplitz is a matrix of M, with all diagonal values in that matrix being the sam
     |---|---|---|---|---|---|---|---|----|
     |       row         |       col      |
     
+    Accessing elements formula 
     Index(A[i][j])
             case 1 if i<=j    | index= (j-i)         -> Upper Diagonal part
             case 2 if i>j     | index= n+(i-j)-1     -> Lower Diagonal part

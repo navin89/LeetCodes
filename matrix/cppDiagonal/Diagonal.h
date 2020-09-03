@@ -27,12 +27,10 @@ public:
         A = new int [n];
     }
 
-    // setRowMajor the elem at specified rw & col
+
     void set(int rw, int col, int elem);
-    // return the elem
     int get(int rw, int col);
     void display();
-
     // this destructor is for the constructor
     // but the main focus here is to actually
     // destroy the dynamically create pointer array A

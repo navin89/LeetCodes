@@ -4,10 +4,7 @@
 * @author Navin Tamilchelvam
 */
 
-#include "Diagonal.h"
-#include <iostream>
-using namespace std;
-
+#include "LowerTri.h"
 
 void LowerTri::setRowMajor(int rw, int col, int elem)
 {

@@ -4,7 +4,8 @@
 
 #ifndef LEETCODES_LOWERTRI_H
 #define LEETCODES_LOWERTRI_H
-
+#include <iostream>
+using namespace std;
 
 class LowerTri {
 
