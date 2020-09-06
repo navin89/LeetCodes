@@ -4,7 +4,7 @@ project(LeetCodes)
 set(CMAKE_CXX_STANDARD 17)
 
 # -- Heap --
-#add_executable(LeetCodes heap/heapEx.cpp)
+add_executable(LeetCodes heap/heapEx.cpp)
 
 # -- Trees --
 #add_executable(LeetCodes
@@ -28,11 +28,11 @@ set(CMAKE_CXX_STANDARD 17)
 
 # --- MATRIX TUTORIAL ---
 #add_executable(LeetCodes matrix/diagonalMatrixC.c)
-add_executable(LeetCodes
-                matrix/cppDiagonal/Diagonal.cpp matrix/cppDiagonal/Diagonal.h
-                matrix/cppDiagonal/LowerTri.h matrix/cppDiagonal/LowerTri.cpp
-                matrix/cppDiagonal/UpperTri.h matrix/cppDiagonal/UpperTri.cpp
-                matrix/cppDiagonal/matrixPlay.cpp)
+#add_executable(LeetCodes
+#                matrix/cppDiagonal/Diagonal.cpp matrix/cppDiagonal/Diagonal.h
+#                matrix/cppDiagonal/LowerTri.h matrix/cppDiagonal/LowerTri.cpp
+#                matrix/cppDiagonal/UpperTri.h matrix/cppDiagonal/UpperTri.cpp
+#                matrix/cppDiagonal/matrixPlay.cpp)
 
 
 # --- STRING TUTORIAL ---

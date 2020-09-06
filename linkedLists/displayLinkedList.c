@@ -9,7 +9,7 @@ struct Node
 {
     int data;
     struct Node *next;
-}*first=NULL;
+}*first=NULL, *second=NULL, *third=NULL;
 // first becomes a global pointer
 
 void Create(int A[], int n)
@@ -19,6 +19,23 @@ void Create(int A[], int n)
     first->data =A[0];
     first->next =NULL;
     last=first;
+
+    for (int j=1;j<n; j++) {
+        t=(struct Node *) malloc(sizeof(struct Node));
+        t->data =A[j];
+        t->next =NULL;
+        last->next = t;
+        last=t;
+    }
+}
+
+void Create2(int A[], int n)
+{
+    struct Node *t, *last;
+    second=(struct Node *) malloc(sizeof(struct Node));
+    second->data =A[0];
+    second->next =NULL;
+    last=second;
 
     for (int j=1;j<n; j++) {
         t=(struct Node *) malloc(sizeof(struct Node));
@@ -347,15 +364,167 @@ int Delete(struct Node *p, int pos)
     }
 }
 
+/** REMOVING IN LINKED LIST */
 
+/**
+ * @details
+ * Remove Duplicates from a sorted Linked List
+ *
+ * This method only removes duplicate if it exist
+ * on the very next index (side by side).
+ * example:
+ *  -   {9,9,28,43,28}
+ *      From the above array only the duplicate for number 9
+ *      will be detected and removed. 28 wont be removed.
+ * */
+void RemoveDuplicate(struct Node *p)
+{
+    struct Node *q =p->next;
+
+    while (q != NULL)
+    {
+        if (p->data!=q->data)
+        {
+            p=q;
+            q=q->next;
+        }
+        else
+        {
+            p->next=q->next;
+            free(q);
+            q=p->next;
+        }
+    }
+}
+
+/**
+ * @details
+ * Remove Duplicates from unsorted Linked List
+ *
+ * This method removes all duplicate values.
+ * we have a few ways to do this.
+ * */
+
+
+
+/** REVERSING LINKED LIST */
+
+
+/**
+ * @details
+ * Reverse a Linked List
+ *
+ * This method reverses a linked list
+ * */
+
+
+/** SORTING LINKED LIST */
+
+/**
+ * @details
+ * Merging linked list
+ *
+ * Time Complexity: O(m+n)
+ * */
+struct Node* merge_lists(struct Node *p, struct Node *q)
+{
+    struct Node *resultPointer, *last;
+    if (p->data < q->data) {
+        resultPointer= last=p;
+        p=p->next;
+        last->next=NULL;
+    }
+    else {
+        resultPointer= last=q;
+        q=q->next;
+        last->next=NULL;
+    }
+
+    while (p != NULL && q != NULL)
+    {
+        // check which is smaller
+        if(p->data < q->data) {
+            last->next=p;
+            last=p;
+            p=p->next;
+            last->next=NULL;
+        }
+        else {
+            last->next=q;
+            last=q;
+            q=q->next;
+            last->next=NULL;
+        }
+    }
+
+    if (p != NULL)
+        last->next=p;
+    else
+        last->next=q;
+
+    return resultPointer;
+}
+
+
+
+/**
+ * @details
+ * Finding the middle in a linked list
+ *
+ * */
+struct Node* find_middle_list(struct Node* p)
+{
+    struct Node *middle, *fast_ptr;
+
+    middle=fast_ptr=p;
+    while (fast_ptr->next != NULL)
+    {
+        fast_ptr =fast_ptr->next=fast_ptr->next;
+
+
+        if(fast_ptr->next != NULL){
+            middle = middle->next;
+        }
+    }
+
+    return middle;
+}
+
+/**
+ * @details
+ * Sort an unsorted linked list using merge sort concept
+ *
+ *
+ * */
+struct Node* sortLinkedList(struct Node *node)
+{
+    struct Node *f, *s, *sortedList, *middle, *middle_next;
+
+    if(node == NULL || node->next == NULL)
+    {
+        return node;
+    }
+
+    middle = find_middle_list(node);
+    middle_next = middle->next;
+    middle->next =NULL;
+
+    f = sortLinkedList(node);
+    s = sortLinkedList(middle_next);
+
+    sortedList = merge_lists(f, s);
+
+    return sortedList;
+}
 
 
 int main() {
 
-    int Arr[]= {3,6,88,4,2,28,9,5};
-    Create(Arr, 8);
-    Delete(first, 40);
-    iterativeDisplay(first);
+    int A[] ={10, 8, 4, 5, 88, 66, 2, 0, 27};
+    Create(A, 9);
+    recursiveDisplay(sortLinkedList(first));
+    printf("\n\n");
+
     return 0;
 }
 
